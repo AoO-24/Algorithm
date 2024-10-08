@@ -25,3 +25,12 @@ print("Minimum element:", min_element)
 
 # Print the min heap after popping
 print("Min heap after popping:", min_heap)
+
+# 创建一个列表
+numbers = [9, 3, 5, 1, 7, 4]
+
+# 将列表转换为最小堆
+heapq.heapify(numbers)
+
+# 打印堆化后的列表
+print("堆化后的列表:", numbers)
