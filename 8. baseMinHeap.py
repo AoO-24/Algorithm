@@ -1,17 +1,27 @@
 import heapq
 
-# Initial list of numbers
-numbers = [7, 2, 5, 3, 8, 4]
+# Initialize an empty list to represent the min heap
+min_heap = []
 
-# Convert the list into a heap : heapify
-heapq.heapify(numbers)
+# Function to push an element onto the min heap
+def push_min_heap(heap, item):
+    heapq.heappush(heap, item)
 
-# Print the heapified list :
-print("Heapified list:", numbers)
+# Function to pop the minimum element from the min heap
+def pop_min_heap(heap):
+    return heapq.heappop(heap)
 
-# Pop the smallest element : heappop
-smallest = heapq.heappop(numbers)
-print("Smallest element:", smallest)
+# Add elements to the min heap
+push_min_heap(min_heap, 10)
+push_min_heap(min_heap, 5)
+push_min_heap(min_heap, 20)
 
-# Print the heap after popping the smallest element
-print("Heap after popping:", numbers)
+# Print the min heap
+print("Min heap:", min_heap)
+
+# Pop the minimum element
+min_element = pop_min_heap(min_heap)
+print("Minimum element:", min_element)
+
+# Print the min heap after popping
+print("Min heap after popping:", min_heap)
